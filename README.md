@@ -1,5 +1,38 @@
 <img src='images/logo.png' />
 
+
+NOTES
+
+completed proof of concept and works very nice. 
+CORS is a browser security issue. When cross-orgin requests are performed, browsers check if the response from
+the request was programmed or approved to be cross-origin or not. You could make your api serve any other 
+origin, hence, all cross-origin request would be allowed. Or, you could configure the api to only respond to certain origins. 
+And, of course, anyone on the internet may directly make requests to the api. But, the response would tell the browswer if
+it was approved or not. If not approved browsers will throw errors. 
+
+But, what if you want to only allow certain origins to consume your api and dissallow
+everyone else? hapi allows you to accomplish this in the request life cycle. The
+request.info.cors.isOriginMatch value
+{ request { info: { cors: { "isOriginMatch": false} }}} value is set after the onRequest extension point
+is passed. I check the value at: onPreResponse point becaus it is allows called.  If the origin does not have
+a match you can stop the request. Now, your api will only handle requests from your configured origins. :-)    
+Thank you Lord!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Welcome to hapijs university.
 This is a community learning experiment utilizing the distributed classroom. The idea is simple - use GitHub as a platform for teaching people coding skills as a group, where everyone is both a student and a teacher. The goal is to learn how to operate such a distributed classroom and then apply that pattern to other topics by other people.
 
