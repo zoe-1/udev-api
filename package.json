@@ -1,6 +1,6 @@
 {
-  "name": "hapi-university-client",
-  "version": "0.0.3",
+  "name": "hapi-university-api",
+  "version": "0.0.4",
   "description": "Community learning experiment",
   "main": "lib/index.js",
   "repository": {
@@ -15,9 +15,9 @@
   ],
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/hapijs/university-client/issues"
+    "url": "https://github.com/hapijs/university-api/issues"
   },
-  "homepage": "https://github.com/hapijs/university-client",
+  "homepage": "https://github.com/hapijs/university-api",
   "dependencies": {
     "hapi": "12.x.x",
     "hoek": "3.x.x"
